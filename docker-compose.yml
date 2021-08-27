@@ -1,0 +1,11 @@
+version: '2'
+services:
+  php:
+    # build: .
+    image: php:7.2-apache
+    ports:
+      - "0.0.0.0:8081:80"
+    environment:
+      - FLAG=flag{test_flag}
+    mem_limit: 2048M
+    restart: always
